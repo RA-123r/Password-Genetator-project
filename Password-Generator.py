@@ -70,8 +70,9 @@ def generate1():
         n = int(length_value)
         password = ""
         up_sm = string.ascii_uppercase + string.ascii_lowercase
-        password = password.join(random.sample(up_sm, n))
-        return password
+        if n > len(up_sm):
+            return "Length too large"
+        password = ''.join(random.choices(up_sm, k=n))
     except:
         return "Invalid length_value"
 
