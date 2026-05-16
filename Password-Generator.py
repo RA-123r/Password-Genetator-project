@@ -64,6 +64,10 @@ def save_password():
     password = password_entry.get()
     with open("passwords.txt", "a") as file:
         file.write(password + "\n")
+
+def dark_mode():
+    root.configure(bg="black")
+
 def generate1():
     "Upper Smaller"
     try:
@@ -287,6 +291,9 @@ password_entry = Entry(root, width=30)
 password_entry.place(x=220, y=200)
 save_btn = Button(root, text="Save", command=save_password)
 save_btn.place(x=380, y=230)
+
+dark_btn = Button(root, text="Dark Mode", command=dark_mode)
+dark_btn.place(x=450, y=230)
 
 copy_btn = Button(master=root, text="Copy", fg="green",
                   font=("Arial", 10, 'bold'), command=copyclip).place(x=320, y=230)
