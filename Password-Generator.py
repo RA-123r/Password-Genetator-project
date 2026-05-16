@@ -249,8 +249,10 @@ root = Tk()
 root.title("TryCatch Password Generator")
 root.geometry("700x300")
 
-title = Label(root, text="TryCatch-Password Generator",
-              fg="Blue", font=("Arial", 15, 'bold')).place(x=200, y=10)
+title = Label(root, text="Password Generator",
+              fg="darkblue", bg="#f0f0f0",
+              font=("Arial", 18, 'bold'))
+title.place(x=180, y=10)
 
 num = IntVar()
 small_case = IntVar()
