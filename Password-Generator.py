@@ -219,7 +219,7 @@ def generate14():
 
 
 def copyclip():
-    passwordcopy = password_entry["text"]
+    passwordcopy = password_entry.get()
     pyperclip.copy(passwordcopy)
 
 
