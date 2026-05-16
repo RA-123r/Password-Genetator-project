@@ -16,9 +16,20 @@ def get_slider_value(value):
 
 
 def progress_status():
-    global no_of_options, length_value
-    no_of_options = upper_case.get() * 5 + small_case.get() * 5 + special_Chars.get() * 5 + num.get() * 5 + length_value * 5
-    length_progress['value'] = no_of_options
+    score = 0
+
+    if upper_case.get():
+        score += 10
+    if small_case.get():
+        score += 10
+    if num.get():
+        score += 10
+    if special_Chars.get():
+        score += 15
+
+    score += length_value * 2
+
+    length_progress['value'] = score
 
 
 def generate_pass():
