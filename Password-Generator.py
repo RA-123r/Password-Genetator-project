@@ -66,7 +66,10 @@ def save_password():
         file.write(password + "\n")
 
 def dark_mode():
-    root.configure(bg="black")
+    root.configure(bg="  black  ")
+
+
+
 
 def generate1():
     "Upper Smaller"
